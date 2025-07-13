@@ -1,1 +1,3 @@
-alert("Bienvenido a tu malla curricular interactiva");
+function toggleCurso(elemento) {
+  elemento.classList.toggle("completado");
+}

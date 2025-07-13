@@ -2,17 +2,33 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Malla Curricular Interactiva</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Malla Interactiva Ing. Mecánica</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Malla Curricular</h1>
+  <h1>Malla Interactiva Ing. Mecánica</h1>
+  
+  <div class="malla">
+    <!-- Año 1 -->
+    <div class="año">
+      <h2>Año 1</h2>
+      <div class="semestre">
+        <h3>Ciclo I</h3>
+        <div class="curso" onclick="toggleCurso(this)" data-tipo="basico">
+          <span class="codigo">IWI131</span>
+          <span class="nombre">Programación</span>
+          <span class="creditos">5</span>
+        </div>
+      </div>
 
-  <div class="curso">
-    <h2>Dinamica</h2>
-    <p>Ciclo: 1</p>
-    <p>Créditos: 5</p>
+      <div class="semestre">
+        <h3>Ciclo II</h3>
+        <!-- Otro curso -->
+      </div>
+    </div>
+
+    <!-- Más años... -->
   </div>
 
   <script src="script.js"></script>
