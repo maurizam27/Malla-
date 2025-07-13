@@ -21,6 +21,13 @@ h1 {
   padding: 10px 0;
 }
 
+h2 {
+  margin-top: 40px;
+  color: #f0f0f0;
+  border-bottom: 1px solid #555;
+  padding-bottom: 5px;
+}
+
 .ciclo {
   min-width: 160px;
   display: flex;
@@ -75,6 +82,7 @@ h1 {
   transform: rotate(-45deg);
   transform-origin: center;
   pointer-events: none;
+  border-radius: 2px;
 }
 
 /* Colores por tipo */
@@ -82,21 +90,6 @@ h1 {
 [data-tipo="ingenieria"] { background-color: #f5b7b1; }
 [data-tipo="electivo"] { background-color: #c3f0ca; }
 
-/* Filtros */
-#filtros {
-  margin: 20px 0;
-  text-align: center;
-}
-
-#filtros button {
-  background-color: #444;
-  color: white;
-  border: none;
-  margin: 5px;
-  padding: 6px 12px;
-  border-radius: 6px;
-  cursor: pointer;
-}
 
 #creditos-total {
   text-align: center;

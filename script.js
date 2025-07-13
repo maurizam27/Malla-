@@ -28,14 +28,5 @@ function cargarProgreso() {
   calcularCreditos();
 }
 
-function filtrarCursos(tipo) {
-  document.querySelectorAll('.curso').forEach(curso => {
-    if (tipo === 'todos' || curso.dataset.tipo === tipo) {
-      curso.style.display = 'block';
-    } else {
-      curso.style.display = 'none';
-    }
-  });
-}
 
 document.addEventListener("DOMContentLoaded", cargarProgreso);

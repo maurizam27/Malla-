@@ -12,24 +12,42 @@
   <!-- Créditos -->
   <div id="creditos-total">Créditos completados: 0</div>
 
-  <!-- Filtros -->
-  <div id="filtros">
-    <button onclick="filtrarCursos('todos')">Todos</button>
-    <button onclick="filtrarCursos('basico')">Básico</button>
-    <button onclick="filtrarCursos('ingenieria')">Ingeniería</button>
-    <button onclick="filtrarCursos('electivo')">Electivo</button>
-  </div>
-
   <!-- Contenedor principal -->
+  <h2>Estudios Generales Ciencias</h2>
   <div class="malla">
     <!-- Cada ciclo es una columna -->
     <div class="ciclo">
       <h3>Ciclo I</h3>
-      <div class="curso" onclick="toggleCurso(this)" data-codigo="MAT101" data-tipo="basico">
-        <div class="nombre">Matemática 1</div>
-        <div class="codigo">MAT101</div>
-        <div class="creditos">4</div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1MAT04" data-tipo="basico">
+        <div class="nombre">Álgebra Matricial y Geometría Analítica</div>
+        <div class="codigo">1MAT04</div>
+        <div class="creditos">4.50</div>
       </div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1MAT05" data-tipo="basico">
+        <div class="nombre">Fundamentos de Cálculo</div>
+        <div class="codigo">1MAT05</div>
+        <div class="creditos">4.50</div>
+      </div>	  
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1FIS01" data-tipo="basico">
+        <div class="nombre">Fundamentos de Física</div>
+        <div class="codigo">1FIS01</div>
+        <div class="creditos">3.50</div>
+      </div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1QUI01" data-tipo="basico">
+        <div class="nombre">Química 1</div>
+        <div class="codigo">1QUI01</div>
+        <div class="creditos">3.50</div>
+      </div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1QUI02" data-tipo="basico">
+        <div class="nombre">Laboratorio de Química 1</div>
+        <div class="codigo">1QUI02</div>
+        <div class="creditos">0.75</div>
+      </div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1LIN15" data-tipo="basico">
+        <div class="nombre">Comunicación Academíca</div>
+        <div class="codigo">1LIN15</div>
+        <div class="creditos">3.00</div>
+      </div>		  
       <!-- Más cursos... -->
     </div>
 
@@ -41,6 +59,34 @@
         <div class="creditos">5</div>
       </div>
     </div>
+	
+    <div class="ciclo">
+      <h3>Ciclo III</h3>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="FIS102" data-tipo="ingenieria">
+        <div class="nombre">Física 1</div>
+        <div class="codigo">FIS102</div>
+        <div class="creditos">5</div>
+      </div>
+    </div>	
+	
+    <div class="ciclo">
+      <h3>Ciclo IV</h3>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="FIS102" data-tipo="ingenieria">
+        <div class="nombre">Física 1</div>
+        <div class="codigo">FIS102</div>
+        <div class="creditos">5</div>
+      </div>
+    </div>
+
+  <h2>Facultad de Ciencias e Ingeniería</h2>
+    <div class="ciclo">
+      <h3>Ciclo V</h3>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="FIS102" data-tipo="ingenieria">
+        <div class="nombre">Física 1</div>
+        <div class="codigo">FIS102</div>
+        <div class="creditos">5</div>
+      </div>
+    </div>	
 
     <!-- Agrega más ciclos como columnas -->
   </div>
