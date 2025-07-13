@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Malla Interactiva Ing. Mecánica</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malla Interactiva</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Malla Interactiva Ing. Mecatrónica</h1>
-  
-  <div class="malla">
-    <!-- Año 1 -->
-    <div class="año">
-      <h2>Año 1</h2>
-      <div class="semestre">
-        <h3>Ciclo I</h3>
-        <div class="curso" onclick="toggleCurso(this)" data-tipo="basico">
-          <span class="codigo">1MAT04</span>
-          <span class="nombre">Álgebra Matricial y Geometría Analítica</span>
-          <span class="creditos">4.5</span>
-        </div>
-		<div class="curso" onclick="toggleCurso(this)" data-tipo="basico">
-          <span class="codigo">1MAT05</span>
-          <span class="nombre">Fundamentos de Cálculo</span>
-          <span class="creditos">4.5</span>
-        </div>
-      </div>
+  <h1>Malla Curricular</h1>
 
-      <div class="semestre">
-        <h3>Ciclo II</h3>
-        <!-- Otro curso -->
+  <!-- Créditos -->
+  <div id="creditos-total">Créditos completados: 0</div>
+
+  <!-- Filtros -->
+  <div id="filtros">
+    <button onclick="filtrarCursos('todos')">Todos</button>
+    <button onclick="filtrarCursos('basico')">Básico</button>
+    <button onclick="filtrarCursos('ingenieria')">Ingeniería</button>
+    <button onclick="filtrarCursos('electivo')">Electivo</button>
+  </div>
+
+  <!-- Contenedor principal -->
+  <div class="malla">
+    <!-- Cada ciclo es una columna -->
+    <div class="ciclo">
+      <h3>Ciclo I</h3>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="MAT101" data-tipo="basico">
+        <div class="nombre">Matemática 1</div>
+        <div class="codigo">MAT101</div>
+        <div class="creditos">4</div>
+      </div>
+      <!-- Más cursos... -->
+    </div>
+
+    <div class="ciclo">
+      <h3>Ciclo II</h3>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="FIS102" data-tipo="ingenieria">
+        <div class="nombre">Física 1</div>
+        <div class="codigo">FIS102</div>
+        <div class="creditos">5</div>
       </div>
     </div>
 
-    <!-- Más años... -->
+    <!-- Agrega más ciclos como columnas -->
   </div>
 
   <script src="script.js"></script>
