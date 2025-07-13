@@ -1,0 +1,1 @@
+alert("Bienvenido a tu malla curricular interactiva");
