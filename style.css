@@ -53,9 +53,22 @@ h1, h2, h3 {
 }
 
 .curso.completado {
-  opacity: 0.5;
-  text-decoration: line-through;
+  position: relative;
+  opacity: 0.6;
 }
+
+.curso.completado::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 140%;
+  height: 2px;
+  background-color: red; /* Puedes cambiar el color si deseas */
+  transform: rotate(-45deg);
+  transform-origin: left top;
+  pointer-events: none; /* Para que aún puedas hacer clic */
+}}
 
 /* Colores por tipo */
 [data-tipo="basico"] { background-color: #ffff99; }
