@@ -61,7 +61,7 @@ h2 {
   text-align: center;
   transition: all 0.3s ease;
   position: relative;
-  overflow: hidden; /* ⬅️ esto es clave */
+  overflow: visible;
 }
 
 .curso.bloqueado {
@@ -88,8 +88,6 @@ h2 {
   content: "";
   position: absolute;
   top: 0;
-  transition: opacity 0.4s ease;
-  opacity: 1;
   left: 0;
   width: 100%;
   height: 100%;
@@ -103,28 +101,17 @@ h2 {
   pointer-events: none;
 }
 
-/* Colores por tipo */
+/* Tipos de cursos */
 [data-tipo="basico"] { background-color: #ffff99; }
 [data-tipo="ingenieria"] { background-color: #f5b7b1; }
 [data-tipo="electivo"] { background-color: #c3f0ca; }
 
-
-#creditos-total {
+/* Indicadores */
+#creditos-total,
+#indicadores {
   text-align: center;
   font-size: 16px;
   margin-bottom: 10px;
-}
-
-#indicadores {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 16px;
-}
-
-#indicadores {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 16px;
 }
 
 .barra-progreso {
@@ -133,7 +120,7 @@ h2 {
   height: 20px;
   background-color: #444;
   border-radius: 10px;
-  margin: 10px auto; /* <-- Centrado */
+  margin: 10px auto;
   overflow: hidden;
 }
 
@@ -154,3 +141,96 @@ h2 {
   pointer-events: none;
 }
 
+/* Curso en progreso */
+.curso.progreso {
+  background-color: #fff8cc;
+  border: 2px dashed #f1c40f;
+  position: relative;
+}
+
+.curso.progreso::after {
+  content: "🟡";
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  font-size: 16px;
+}
+
+/* ✅ Ícono de corequisito */
+.curso .corequisito {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  font-size: 16px;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 2px 4px;
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+/* Borde especial para cursos habilitados por corequisito */
+.curso.habilitado-por-corequisito {
+  border: 2px dashed #66c2ff;
+}
+
+/* Leyenda */
+.leyenda {
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  padding: 15px;
+  margin: 0 auto 30px auto;
+  border-radius: 10px;
+  max-width: 500px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.leyenda h3 {
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 16px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
+}
+
+.leyenda .item {
+  display: flex;
+  align-items: center;
+  margin: 6px 0;
+  color: #ddd;
+}
+
+.leyenda .cuadro {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 4px;
+  border: 1px solid #666;
+}
+
+.cuadro.disponible {
+  background-color: #ffff99;
+}
+
+.cuadro.completado {
+  background: linear-gradient(
+    to bottom right,
+    transparent 49.5%,
+    red 49.5%,
+    red 50.5%,
+    transparent 50.5%
+  );
+  background-color: #ffff99;
+}
+
+.cuadro.progreso {
+  background-color: #fff8cc;
+  border: 2px dashed #f1c40f;
+}
+
+.cuadro.bloqueado {
+  background-color: #999;
+  opacity: 0.4;
+  filter: grayscale(100%);
+}

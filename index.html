@@ -117,7 +117,7 @@
       <div class="curso" onclick="toggleCurso(this)" data-codigo="1FIS04" data-requiere="1FIS02,1FIS03">
         <div class="nombre">Física 2</div>
         <div class="codigo">1FIS04</div>
-        <div class="creditos"></div>
+        <div class="creditos">4.5</div>
       </div>
       <div class="curso" onclick="toggleCurso(this)" data-codigo="1FIS05" data-requiere="1FIS02,1FIS03">
         <div class="nombre">Laboratorio de Física 2</div>
@@ -148,7 +148,7 @@
         <div class="codigo">1FIS06</div>
         <div class="creditos">4.50</div>
       </div>	
-      <div class="curso" onclick="toggleCurso(this)" data-codigo="1FIS07" data-requiere="1FIS04, 1FIS05">
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1FIS07" data-requiere="1FIS04,1FIS05">
         <div class="nombre">Laboratorio de Física 3</div>
         <div class="codigo">1FIS07</div>
         <div class="creditos">0.50</div>
@@ -187,187 +187,219 @@
         <div class="codigo">1EST22</div>
         <div class="creditos">3.50</div>
       </div>
-      <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1IEE27" data-requiere="1FIS06,1FIS07">
+        <div class="nombre">Circuitos Eléctricos </div>
+        <div class="codigo">1IEE27</div>
+        <div class="creditos">4,00</div>
       </div>
-      <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1IEE28" data-requiere="1IEE04,1INF01,ING693">
+        <div class="nombre">Sistemas Digitales B</div>
+        <div class="codigo">1IEE28</div>
+        <div class="creditos">5.00</div>
       </div>	
-      <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1MTR50" data-requiere="1ING02">
+        <div class="nombre">Representación Gráfica para Ingeniería Mecatrónica</div>
+        <div class="codigo">1MTR50</div>
+        <div class="creditos">3.50</div>
       </div>	
-      <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="ING212" data-requiere="ING693,1MAT09">
+        <div class="nombre">Dinámica</div>
+        <div class="codigo">ING212</div>
+        <div class="creditos">5.00</div>
       </div>		  
     </div>
 
     <div class="ciclo">
       <h3>Ciclo VI</h3>
-	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="1IEE29" data-requiere="1IEE27" data-corequiere="1MTR50">
+        <div class="nombre">Fundamentos y Aplicaciones de Electrónica</div>
+        <div class="codigo">1IEE29</div>
+        <div class="creditos">4.00</div>
       </div>
-	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="1INF53" data-requiere="1INF01" data-corequiere="1IEE28,1MTR53">
+        <div class="nombre">Programación Orientada a Objetos</div>
+        <div class="codigo">1INF53</div>
+        <div class="creditos">5.00</div>
       </div>
-	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="1MEC04" data-corequiere="1MTR50">
+        <div class="nombre">Taller de Procesos de Fabricación</div>
+        <div class="codigo">1MEC04</div>
+        <div class="creditos">2.00</div>
       </div>
-	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="1MEC40" data-requiere="ING693,1MAT08" data-corequiere="1MTR50">
+        <div class="nombre">Mecánica de Sólidos</div>
+        <div class="codigo">1MEC40</div>
+        <div class="creditos">4.00</div>
       </div>
-	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="1MEC41" data-requiere="1FIS04,1FIS05,1MAT08">
+        <div class="nombre">Termofluidos A</div>
+        <div class="codigo">1MEC41</div>
+        <div class="creditos">4.50</div>
       </div>
-	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="1MTR53" data-requiere="ING212,1EST22" data-corequiere="1IEE29">
+        <div class="nombre">Robótica e Inteligencia Artificial</div>
+        <div class="codigo">1MTR53</div>
+        <div class="creditos">3.00</div>
       </div>	  
     </div>	 
 	
     <div class="ciclo">
       <h3>Ciclo VII</h3>
-	  	<div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
+	  	<div class="curso" onclick="toggleCurso(this)" data-codigo="1IEE30" data-requiere="1IEE28,1IEE29">
+        <div class="nombre">Electrotecnia Industrial </div>
+        <div class="codigo">1IEE30</div>
+        <div class="creditos">3.00</div>
       </div>
-		<div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
+		<div class="curso" onclick="toggleCurso(this)" data-codigo="1MEC42" data-corequiere="1MEC40">
+        <div class="nombre">Ingeniería de Materiales A</div>
+        <div class="codigo">1MEC42</div>
+        <div class="creditos">4.00</div>
       </div>
-	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="1MEC43" data-requiere="1MEC04,1MEC40,1MTR53" data-corequiere="1MTR54">
+        <div class="nombre">Elementos de Máquinas en Sistemas Mecatrónicos</div>
+        <div class="codigo">1MEC43</div>
+        <div class="creditos">5.00</div>
       </div>
-	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="1MEC45" data-requiere="1MEC04" data-corequiere="1MEC42" >
+        <div class="nombre">Procesos y Tecnologías de Fabricación</div>
+        <div class="codigo">1MEC45</div>
+        <div class="creditos">3.50</div>
       </div>
-	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="1MTR54" data-requiere="ING212,1MEC41" data-corequiere="1IEE29">
+        <div class="nombre">Sistemas Dinámicos y Control A</div>
+        <div class="codigo">1MTR54</div>
+        <div class="creditos">4.00</div>
       </div>
-	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="1MTR55" data-requiere="1INF53" data-corequiere="1MTR54">
+        <div class="nombre">Automatización Industrial Inteligente A</div>
+        <div class="codigo">1MTR55</div>
+        <div class="creditos">3.00</div>
       </div>
     </div>	
 
     <div class="ciclo">
       <h3>Ciclo VIII</h3>
-	  	<div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
+	  	<div class="curso" onclick="toggleCurso(this)" data-codigo="1MEC44" data-requiere="1MEC42" data-corequiere="1MEC43">
+        <div class="nombre">Laboratorio de Diseño Mecánico en Sistemas Mecatrónicos</div>
+        <div class="codigo">1MEC44</div>
+        <div class="creditos">1.00</div>
       </div>
-		<div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
+		<div class="curso" onclick="toggleCurso(this)" data-codigo="1MEC46" data-requiere="1MEC41">
+        <div class="nombre">Laboratorio de Termodinámica y Fluidos</div>
+        <div class="codigo">1MEC46</div>
+        <div class="creditos">1.00</div>
       </div>
-	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="1MTR56" data-requiere="1MTR55,1MEC45,1IEE30" data-corequiere="1MEC46">
+        <div class="nombre">Automatización Industrial Inteligente B</div>
+        <div class="codigo">1MTR56</div>
+        <div class="creditos">4.00</div>
       </div>
-	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="1MTR57" data-requiere="1MTR54">
+        <div class="nombre">Sistemas Dinámicos y Control B</div>
+        <div class="codigo">1MTR57</div>
+        <div class="creditos">4.00</div>
       </div>
-	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="IEE239" data-requiere="1MTR53,1IEE30">
+        <div class="nombre">Procesamiento de Señales e Imágenes Digitales</div>
+        <div class="codigo">IEE239</div>
+        <div class="creditos">4.00</div>
       </div>
-	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="IND231" data-creditos-min="120" >
+        <div class="nombre">Ingeniería Económica</div>
+        <div class="codigo">IND231</div>
+        <div class="creditos">3.50</div>
       </div>
-	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="MTR240" data-requiere="1MEC43,1MTR54" data-corequiere="1MTR55">
+        <div class="nombre">Metodología del Diseño Mecatrónico</div>
+        <div class="codigo">MTR240</div>
+        <div class="creditos">3.00</div>
       </div>
     </div>
 
     <div class="ciclo">
       <h3>Ciclo IX</h3>
-		<div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
+		<div class="curso" onclick="toggleCurso(this)" data-codigo="MTR202" data-creditos-min="150">
+        <div class="nombre">Práctica Supervisada Pre-Profesional</div>
+        <div class="codigo">MTR202</div>
+        <div class="creditos">0.50</div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="1MTR01" data-requiere="MTR240,1MTR55">
+        <div class="nombre">Trabajo de Fin de Carrera 1</div>
+        <div class="codigo">1MTR01</div>
+        <div class="creditos">3.00</div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="1MTR52" data-requiere="MTR240,IEE239,1MEC44" data-corequiere="1MTR56">
+        <div class="nombre">Proyecto de Diseño Mecatrónico</div>
+        <div class="codigo">1MTR52</div>
+        <div class="creditos">4.50</div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="1MTR58" data-requiere="1MTR54,1MEC43,IEE239">
+        <div class="nombre">Fundamentos y Aplicaciones de Biomecatrónica</div>
+        <div class="codigo">1MTR58</div>
+        <div class="creditos">3.00</div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="ING220" data-creditos-min="120">
+        <div class="nombre">Ética Profesiona</div>
+        <div class="codigo">ING220</div>
+        <div class="creditos">2.00</div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="ELECA" data-requiere="">
+        <div class="nombre">Electivo Tipo A</div>
+        <div class="codigo">min 3.00</div>
         <div class="creditos"></div>
       </div>
-	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="ELECE" data-requiere="">
+        <div class="nombre">Electivo de Especialidad</div>
+        <div class="codigo">min 3.00</div>
         <div class="creditos"></div>
-      </div>
-	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
-      </div>
-	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
-      </div>
-	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
-      </div>
-	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
-        <div class="creditos"></div>
-      </div> 
+      </div> 	  
     </div>	
 
     <div class="ciclo">
       <h3>Ciclo X</h3>
-		<div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
+		<div class="curso" onclick="toggleCurso(this)" data-codigo="1IND44" data-creditos-min="120">
+        <div class="nombre">Gestión Empresarial</div>
+        <div class="codigo">1IND44</div>
+        <div class="creditos">3.50</div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="1MTR02" data-requiere="1MTR52,1MTR01,1MTR56">
+        <div class="nombre">Trabajo de Fin de Carrera 2</div>
+        <div class="codigo">1MTR02</div>
+        <div class="creditos">3.00</div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="ELECB" data-requiere="">
+        <div class="nombre">Electivo Tipo B</div>
+        <div class="codigo">min 3.00</div>
         <div class="creditos"></div>
       </div>
-	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
-        <div class="nombre"></div>
-        <div class="codigo"></div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="ELECE" data-requiere="">
+        <div class="nombre">Electivo de Especialidad</div>
+        <div class="codigo">min 9.00</div>
         <div class="creditos"></div>
-      </div>
+      </div>	  
+  	  	  
 	  	<!-- electivoss -->  
     </div>	
 	
    </div>
    </div>
    </div>
+   
+   <div class="leyenda">
+  <h3>📘 Leyenda de Estados de Curso</h3>
+  <div class="item">
+    <span class="cuadro disponible"></span> Curso Disponible 
+  </div>
+  <div class="item">
+    <span class="cuadro completado"></span> Curso Completado
+  </div>
+  <div class="item">
+    <span class="cuadro progreso"></span> Curso en Progreso
+  </div>
+  <div class="item">
+    <span class="cuadro bloqueado"></span> Curso Bloqueado 
+  </div>
+</div>
 
   <script src="script.js"></script>
 </body>
