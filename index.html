@@ -9,88 +9,368 @@
 <body>
   <h1>Malla Curricular</h1>
 
-  <!-- Créditos -->
-  <div id="creditos-total">Créditos completados: 0</div>
+  <!-- Indicadores -->
+  <div id="indicadores">
+	  <div id="creditos-total">Créditos aprobados: 0.0</div>
+	  <div id="cursos-aprobados">Cursos aprobados: 0</div>
+	  <div id="avance-carrera">Avance en la carrera: 0%</div>
+		<div class="barra-progreso">
+		<div class="relleno"></div>
+		</div>
+  </div>
 
   <!-- Contenedor principal -->
+  <div class="malla">
+  <div class="seccion">
   <h2>Estudios Generales Ciencias</h2>
   <div class="malla">
     <!-- Cada ciclo es una columna -->
     <div class="ciclo">
       <h3>Ciclo I</h3>
-      <div class="curso" onclick="toggleCurso(this)" data-codigo="1MAT04" data-tipo="basico">
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1MAT04" >
         <div class="nombre">Álgebra Matricial y Geometría Analítica</div>
         <div class="codigo">1MAT04</div>
         <div class="creditos">4.50</div>
       </div>
-      <div class="curso" onclick="toggleCurso(this)" data-codigo="1MAT05" data-tipo="basico">
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1MAT05" >
         <div class="nombre">Fundamentos de Cálculo</div>
         <div class="codigo">1MAT05</div>
         <div class="creditos">4.50</div>
       </div>	  
-      <div class="curso" onclick="toggleCurso(this)" data-codigo="1FIS01" data-tipo="basico">
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1FIS01" >
         <div class="nombre">Fundamentos de Física</div>
         <div class="codigo">1FIS01</div>
         <div class="creditos">3.50</div>
       </div>
-      <div class="curso" onclick="toggleCurso(this)" data-codigo="1QUI01" data-tipo="basico">
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1QUI01" >
         <div class="nombre">Química 1</div>
         <div class="codigo">1QUI01</div>
         <div class="creditos">3.50</div>
       </div>
-      <div class="curso" onclick="toggleCurso(this)" data-codigo="1QUI02" data-tipo="basico">
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1QUI02">  
         <div class="nombre">Laboratorio de Química 1</div>
         <div class="codigo">1QUI02</div>
         <div class="creditos">0.75</div>
-      </div>
-      <div class="curso" onclick="toggleCurso(this)" data-codigo="1LIN15" data-tipo="basico">
+	  </div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1LIN15" >
         <div class="nombre">Comunicación Academíca</div>
         <div class="codigo">1LIN15</div>
         <div class="creditos">3.00</div>
-      </div>		  
+      </div>		  		
+
+
       <!-- Más cursos... -->
     </div>
 
     <div class="ciclo">
       <h3>Ciclo II</h3>
-      <div class="curso" onclick="toggleCurso(this)" data-codigo="FIS102" data-tipo="ingenieria">
-        <div class="nombre">Física 1</div>
-        <div class="codigo">FIS102</div>
-        <div class="creditos">5</div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1MAT06" data-requiere="1MAT05" >
+        <div class="nombre">Cálculo Diferencial</div>
+        <div class="codigo">1MAT06</div>
+        <div class="creditos">4.50</div>
       </div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1FIS02" data-requiere="1FIS01">
+        <div class="nombre">Física 1</div>
+        <div class="codigo">1FIS02</div>
+        <div class="creditos">4.50</div>
+      </div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1FIS03" data-requiere="1FIS01">
+        <div class="nombre">Laboratorio de Física 1</div>
+        <div class="codigo">1FIS03</div>
+        <div class="creditos">0.50</div>
+      </div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1ING02" data-requiere="1MAT04">
+        <div class="nombre">Dibujo en Ingeniería</div>
+        <div class="codigo">1ING02</div>
+        <div class="creditos">4.50</div>
+      </div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1LIN16" data-requiere="1LIN15">
+        <div class="nombre">Trabajo Académico</div>
+        <div class="codigo">1LIN16</div>
+        <div class="creditos">3.00</div>
+      </div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1FIL01" >
+        <div class="nombre">Ciencia y Filososía</div>
+        <div class="codigo">1FIL01</div>
+        <div class="creditos">3.00</div>
+      </div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1HUM01" >
+        <div class="nombre">Electivo de Humanidades 1</div>
+        <div class="codigo">1HUM01</div>
+        <div class="creditos">2.00</div>
+      </div>	  
     </div>
+
 	
     <div class="ciclo">
       <h3>Ciclo III</h3>
-      <div class="curso" onclick="toggleCurso(this)" data-codigo="FIS102" data-tipo="ingenieria">
-        <div class="nombre">Física 1</div>
-        <div class="codigo">FIS102</div>
-        <div class="creditos">5</div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1MAT07" data-requiere="1MAT06,1MAT04">
+        <div class="nombre">Cálculo Integral</div>
+        <div class="codigo">1MAT07</div>
+        <div class="creditos">4.50</div>
       </div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1MAT08" data-requiere="1MAT06,1MAT04">
+        <div class="nombre">Cálculo en Varias Variables</div>
+        <div class="codigo">1MAT08</div>
+        <div class="creditos">4.50</div>
+      </div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1FIS04" data-requiere="1FIS02,1FIS03">
+        <div class="nombre">Física 2</div>
+        <div class="codigo">1FIS04</div>
+        <div class="creditos"></div>
+      </div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1FIS05" data-requiere="1FIS02,1FIS03">
+        <div class="nombre">Laboratorio de Física 2</div>
+        <div class="codigo">1FIS05</div>
+        <div class="creditos">0.50</div>
+      </div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1IEE04" data-creditos-min="35" >
+        <div class="nombre">Diseño Digital</div>
+        <div class="codigo">1IEE04</div>
+        <div class="creditos">5.00</div>
+      </div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1HUM02" >
+        <div class="nombre">Electivo de Humanidades 2</div>
+        <div class="codigo">1HUM02</div>
+        <div class="creditos">3.00</div>
+      </div>	  
     </div>	
 	
     <div class="ciclo">
       <h3>Ciclo IV</h3>
-      <div class="curso" onclick="toggleCurso(this)" data-codigo="FIS102" data-tipo="ingenieria">
-        <div class="nombre">Física 1</div>
-        <div class="codigo">FIS102</div>
-        <div class="creditos">5</div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1MAT09" data-requiere="1MAT08">
+        <div class="nombre">Cálculo Aplicado</div>
+        <div class="codigo">1MAT09</div>
+        <div class="creditos">4.50</div>
       </div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1FIS06" data-requiere="1FIS04,1FIS05">
+        <div class="nombre">Física 3</div>
+        <div class="codigo">1FIS06</div>
+        <div class="creditos">4.50</div>
+      </div>	
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1FIS07" data-requiere="1FIS04, 1FIS05">
+        <div class="nombre">Laboratorio de Física 3</div>
+        <div class="codigo">1FIS07</div>
+        <div class="creditos">0.50</div>
+      </div>	
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1INF01" >
+        <div class="nombre">Fundamentos de Programación</div>
+        <div class="codigo">1INF01</div>
+        <div class="creditos">3.00</div>
+      </div>	
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="ING693" data-requiere="1FIS02">
+        <div class="nombre">Mecánica para Ingenieros 1</div>
+        <div class="codigo">ING693</div>
+        <div class="creditos">5.00</div>
+      </div>	
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1TEO01">
+        <div class="nombre">Electivo de Teología y Religión</div>
+        <div class="codigo">1TEO01</div>
+        <div class="creditos">3.00</div>
+      </div>		  
     </div>
+   <!-- Agrega más ciclos como columnas -->
+   
+  </div>
+  </div>
 
+  
+  
+  
+  <div class="seccion">
   <h2>Facultad de Ciencias e Ingeniería</h2>
+  <div class="malla">
     <div class="ciclo">
       <h3>Ciclo V</h3>
-      <div class="curso" onclick="toggleCurso(this)" data-codigo="FIS102" data-tipo="ingenieria">
-        <div class="nombre">Física 1</div>
-        <div class="codigo">FIS102</div>
-        <div class="creditos">5</div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="1EST22" data-requiere="1MAT09">
+        <div class="nombre">Probabilidad y Estadística</div>
+        <div class="codigo">1EST22</div>
+        <div class="creditos">3.50</div>
+      </div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>	
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>	
+      <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>		  
+    </div>
+
+    <div class="ciclo">
+      <h3>Ciclo VI</h3>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>	  
+    </div>	 
+	
+    <div class="ciclo">
+      <h3>Ciclo VII</h3>
+	  	<div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+		<div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
       </div>
     </div>	
 
-    <!-- Agrega más ciclos como columnas -->
-  </div>
+    <div class="ciclo">
+      <h3>Ciclo VIII</h3>
+	  	<div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+		<div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+    </div>
+
+    <div class="ciclo">
+      <h3>Ciclo IX</h3>
+		<div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div> 
+    </div>	
+
+    <div class="ciclo">
+      <h3>Ciclo X</h3>
+		<div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+	  <div class="curso" onclick="toggleCurso(this)" data-codigo="" data-requiere="">
+        <div class="nombre"></div>
+        <div class="codigo"></div>
+        <div class="creditos"></div>
+      </div>
+	  	<!-- electivoss -->  
+    </div>	
+	
+   </div>
+   </div>
+   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
+ 

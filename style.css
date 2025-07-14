@@ -44,6 +44,12 @@ h2 {
   color: #ffd;
 }
 
+.seccion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .curso {
   background-color: #ffff99;
   color: #000;
@@ -55,6 +61,13 @@ h2 {
   text-align: center;
   transition: all 0.3s ease;
   position: relative;
+  overflow: hidden; /* ⬅️ esto es clave */
+}
+
+.curso.bloqueado {
+  filter: grayscale(100%);
+  opacity: 0.4;
+  pointer-events: none;
 }
 
 .curso .nombre {
@@ -75,14 +88,14 @@ h2 {
   content: "";
   position: absolute;
   top: 50%;
-  left: 0;
-  width: 100%;
+  left: -10%;
+  width: 120%;
   height: 2px;
-  background-color: red;
+  background: red;
   transform: rotate(-45deg);
   transform-origin: center;
   pointer-events: none;
-  border-radius: 2px;
+  opacity: 0.7;
 }
 
 /* Colores por tipo */
@@ -96,3 +109,43 @@ h2 {
   font-size: 16px;
   margin-bottom: 10px;
 }
+
+#indicadores {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+#indicadores {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.barra-progreso {
+  width: 100%;
+  max-width: 400px;
+  height: 20px;
+  background-color: #444;
+  border-radius: 10px;
+  margin: 10px auto; /* <-- Centrado */
+  overflow: hidden;
+}
+
+.barra-progreso .relleno {
+  height: 100%;
+  width: 0%;
+  background-color: #4caf50;
+  transition: width 0.5s ease;
+}
+
+.curso .candado {
+  position: absolute;
+  top: 4px;
+  right: 6px;
+  font-size: 16px;
+  color: #555;
+  opacity: 0.8;
+  pointer-events: none;
+}
+
