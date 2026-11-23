@@ -89,28 +89,22 @@ function verificarRequisitos() {
 
     const habilitado = cumpleRequisitos && cumpleCorequisitos && cumpleCreditos;
 
-    // ⚠️ Bloquear cursos que no cumplen
     if (!habilitado) {
       curso.classList.add("bloqueado");
       curso.classList.remove("habilitado-por-corequisito");
 
-      // Eliminar ícono si existe
       const ic = curso.querySelector(".corequisito");
       if (ic) ic.remove();
 
-      // Quitar estado si estaba marcado
       curso.classList.remove("completado", "progreso");
 
-      // Tooltip informativo
       curso.title = `Requiere: ${requisitos || "-"}${corequisitos ? ` | Corequiere: ${corequisitos}` : ""}`;
       return;
     }
 
-    // ✅ Curso habilitado
     curso.classList.remove("bloqueado");
     curso.title = "";
 
-    // Mostrar ícono 🔁 si algún corequisito está en progreso
     if (cumpleCorequisitos && codigosCorequisitos.length > 0 && coreqEnProgreso) {
       curso.classList.add("habilitado-por-corequisito");
 
@@ -137,3 +131,4 @@ document.addEventListener("DOMContentLoaded", () => {
     curso.addEventListener("click", () => toggleCurso(curso));
   });
 });
+
