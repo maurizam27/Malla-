@@ -101,12 +101,10 @@ h2 {
   pointer-events: none;
 }
 
-/* Tipos de cursos */
 [data-tipo="basico"] { background-color: #ffff99; }
 [data-tipo="ingenieria"] { background-color: #f5b7b1; }
 [data-tipo="electivo"] { background-color: #c3f0ca; }
 
-/* Indicadores */
 #creditos-total,
 #indicadores {
   text-align: center;
@@ -141,7 +139,6 @@ h2 {
   pointer-events: none;
 }
 
-/* Curso en progreso */
 .curso.progreso {
   background-color: #fff8cc;
   border: 2px dashed #f1c40f;
@@ -156,7 +153,6 @@ h2 {
   font-size: 16px;
 }
 
-/* ✅ Ícono de corequisito */
 .curso .corequisito {
   position: absolute;
   top: 4px;
@@ -169,12 +165,10 @@ h2 {
   pointer-events: none;
 }
 
-/* Borde especial para cursos habilitados por corequisito */
 .curso.habilitado-por-corequisito {
   border: 2px dashed #66c2ff;
 }
 
-/* Leyenda */
 .leyenda {
   background-color: #1e1e1e;
   border: 1px solid #444;
@@ -234,3 +228,4 @@ h2 {
   opacity: 0.4;
   filter: grayscale(100%);
 }
+
